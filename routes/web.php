@@ -11,9 +11,28 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
+Route::get('/', 'FrontController@index');
 
 
 
-Route::get('/laptops','HomeController@laptops')->name('laptops');
+Route::get('/laptops','FrontController@laptops')->name('laptops');
 
+
+Auth::routes();
+Route::get('/logout', 'Auth\LoginController@logout');
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['prefix'=>'admin', 'middleware'=>'auth'], function (){
+
+    Route::get('/', function(){
+
+        return view('admin.index');
+
+
+    })->name('admin.index');
+
+
+
+
+});
