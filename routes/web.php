@@ -15,5 +15,5 @@ Route::get('/', 'HomeController@index');
 
 
 
-
+Route::get('/laptops','HomeController@laptops')->name('laptops');
 

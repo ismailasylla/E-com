@@ -15,4 +15,14 @@ class HomeController extends Controller
         }
 
 
+
+        public function laptops(){
+
+            return view('front.laptops');
+
+
+
+        }
+
+
 }
