@@ -40,7 +40,7 @@
                             <div class="form-group">
 
                                 {!! Form::label('category_id','Categories:') !!}
-                                {!! Form::select('category_id',[1=>'Laptop','Phone','Mouse','Pc'], null, ['class'=>'form-control','placeholder'=>'Select Category']) !!}
+                                {!! Form::select('category_id',$categories, null, ['class'=>'form-control','placeholder'=>'Select Category']) !!}
 
                             </div>
 

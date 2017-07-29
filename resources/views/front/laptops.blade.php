@@ -33,13 +33,13 @@
                                         <div class="a-row image-row">
                                             <div class="a-column a-span6 leftCol">
                                                 <div class="imageWithText">
-                                                    <a class="a-link-normal" href="/b/ref=br_pdt_mgLwt?_encoding=UTF8&amp;node=976442031&amp;pf_rd_m=A1VBAL9TL5WCBF&amp;pf_rd_s=&amp;pf_rd_r=W75WGEX32PCJGN5MBGSP&amp;pf_rd_t=36701&amp;pf_rd_p=421ef56f-3430-469c-ba3a-900d2332c7ae&amp;pf_rd_i=desktop"><img alt="Accer-Aspire" src="images/accer aspire.jpg" height="292px" width="292px" id="featured" class="img-responssive"></a>
+                                                    <a class="a-link-normal" href="{{route('laptops')}}"><img alt="Accer-Aspire" src="{{url('image', $laptop->image)}}" height="292px" width="292px" id="featured" class="img-responssive"></a>
                                                     <div class="departmentTitle" style="padding: 10px;">
                                                         <p class="list-price text-danger"> Prix:
                                                             <s>300.000 Fcfa</s>
                                                         </p>
                                                         <p class="price"> {{ $laptop->price }}</p>
-                                                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal-1">{{$laptop->description}}</button>
+                                                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal-1">Detail Du Produit</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -62,12 +62,12 @@
     </div>
 
 
-
     <!-- Modal -->
     <div>
         <div class="modal fade" id="myModal-1" role="dialog">
             <div class="modal-dialog">
                 <!-- Modal content-->
+
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -75,18 +75,18 @@
                     </div>
                     <div class="modal-body">
                         <a href="">
-                            <p>Acer Aspire TC-780 Unité centrale Noir (Intel core_i5, 8 Go de RAM, 1 To, Nvidia GeForce GTX 950, Windows 10)</p>
+                            <p>{{$laptop->description}}</p>
                         </a>
-                        <h4> Accer Aspire </h4>
+                        <h4> {{$laptop->name }} </h4>
                         <div class="a-row image-row">
                             <div class="a-column a-span6 leftCol">
                                 <div class="imageWithText">
-                                    <a class="a-link-normal" href="/b/ref=br_pdt_mgLwt?_encoding=UTF8&amp;node=976442031&amp;pf_rd_m=A1VBAL9TL5WCBF&amp;pf_rd_s=&amp;pf_rd_r=W75WGEX32PCJGN5MBGSP&amp;pf_rd_t=36701&amp;pf_rd_p=421ef56f-3430-469c-ba3a-900d2332c7ae&amp;pf_rd_i=desktop"><img alt="Accer-Aspire" src="images/accer aspire.jpg" height="292px" width="292px" id="featured" class="img-responsive"></a>
+                                    <a class="a-link-normal" href="{{route('laptops')}}"><img alt="Accer-Aspire" src="{{url('image', $laptop->image)}}" height="292px" width="292px" id="featured" class="img-responsive"></a>
                                     <div class="departmentTitle" style="padding: 10px;">
                                         <p class="list-price text-danger"> Prix:
                                             <s>300.000 Fcfa</s>
                                         </p>
-                                        <p class="price"> Notre Prix: 250.000 Fcfa </p>
+                                        <p class="price">{{$laptop->price}}</p>
                                     </div>
                                 </div>
                             </div>
