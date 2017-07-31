@@ -21,7 +21,8 @@ Route::get('/laptops','FrontController@laptops')->name('laptops');
 Auth::routes();
 Route::get('/logout', 'Auth\LoginController@logout');
 
-Route::get('/home', 'FrontController@index')->name('home');
+Route::get('/home', 'FrontController@index');
+Route::resource('/cart', 'CartController');
 
 Route::group(['prefix'=>'admin', 'middleware'=>'auth'], function (){
 

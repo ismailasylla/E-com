@@ -43,9 +43,14 @@
                         <span class="glyphicon glyphicon-shopping-cart" style="color: white"></span> Shopping Cart
                     </a>
                 </li> -->
-                        <li class="input-group-btn" style="margin-top: 8px; margin-right: 5px;">
-                            <button class="btn btn-warning" type="button" style="border-top-left-radius: 7px !important;"> Panier <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>&zwnj;</button>
-                        </li>
+                        {{--<li class="input-group-btn" style="margin-top: 8px; margin-right: 5px;">--}}
+
+                        <a href="{{route('cart.index')}}"> <button class="btn btn-warning" type="button" style="border-top-left-radius: 7px !important;margin-top: 8px; margin-right: 5px;">
+                                Panier <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true" class="alert-badge"><b>{{Cart::count()}}</b></span>&zwnj;</button></a>
+
+
+
+                        {{--</li>--}}
                     </ul>
                     <div class="nav navbar-nav">
                         <li class="dropdown">
@@ -97,7 +102,10 @@
             </nav>
             <!-- End-Navbar ================================================== -->
             @yield('content')
-            <footer class="text-center" id="footer">&copy; Copyright 2017-2018 Future-Technology</footer>
+
+
+            <div class="container-fluid"><footer class="text-center" id="footer" style=" margin-top: 520px ">&copy; Copyright 2017-2018 Future-Technology</footer></div>
+
             <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
             <script src="js/jquery.min.js"></script>
             <!-- <script src="js/bootstrap.js"></script> -->

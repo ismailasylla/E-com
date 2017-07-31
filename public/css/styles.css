@@ -63,7 +63,7 @@
 
 }
 #footer{
-    position:;
+    /*position:absolute;*/
     left:0px;
     bottom:0px;
     height:30px;
@@ -72,6 +72,7 @@ padding: 20px;
 background-color: #239FE5;
 height: 60px;
 color: white;
+margin:  auto;
 
 
 }
@@ -327,7 +328,7 @@ img, a
 
 .row{
     margin-top: 30px;
-    margin-right: -70px;
+    /*margin-right: -70px;*/
     margin-left: -15px;
 
 

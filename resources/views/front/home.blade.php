@@ -74,6 +74,7 @@
                                                 <s>300.000 Fcfa</s>
                                             </p>
                                             <p class="price"> {{ $laptop->price }}</p>
+                                            <a href="{{route('cart.edit',$laptop->id)}}" type="button" class="btn btn-success" data-toggle="modal">Ajouter au panier</a>
                                             <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal-1">Detail Du Produit</button>
                                         </div>
                                     </div>
