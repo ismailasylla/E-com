@@ -4,7 +4,7 @@
 
     <div class="row">
 
-        <div class="container" style="padding-top: 17px">
+        <div class="container" style="margin-top: 17px; padding: 5px" >
 
 
             <h3>Cart Items</h3>
@@ -28,21 +28,44 @@
                         <td>{{$cartItem->name}}</td>
                         <td>{{$cartItem->price}}</td>
                         <td width="50px" style= padding:5px>
-                            {{$cartItem->qty}}
+                            {{--{{$cartItem->qty}}--}}
 
                             {!! Form::open(['route'=>['cart.update', $cartItem->rowId],'method'=>'PUT']) !!}
 
-                            <input name="qty" type="text" value="{{$cartItem->qty}}" style="width: 40px; " class="form-control">
+                            <input name="qty" type="text" value="{{$cartItem->qty}}" style="width: 40px; margin-top: 3px " class="form-control">
                             {{--<select name="qty" id="" value="{{$cartItem->qty}}" style="width: 40px; " class="form-control"></select>--}}
-                            <input type="submit" class="btn btn-sm btn-info" value="OK" style="margin-top:5px">
+
+
+
+
+
+                        </td>
+
+
+                        {{--<div>  {!! Form::select(['size'=>['13'=>'13inches', '15'=>'15 inches'], $cartItem->options->has('size') ]) !!}--}}
+
+
+
+                        {{--{!! Form::close() !!} </div>--}}
+
+
+                        {{--<td> <div>{!!  Form::select('size', ['small'=>'small','medium'=>'medium'], $cartItem->options->has('size')?$cartItem->options->size:'' !!}</div></td>--}}
+
+
+
+
+                        <td>
+
+                            {!! Form::select('size', ['13'=>'13 inches','15'=>'15 inches']  , $cartItem->options->has('size')?$cartItem->options->size:'' ,['class'=>'form-control','placeholder'=>'Select size']) !!}
+
+                        </td>
+
+                        <td>
+
+                            <input type="submit" class="btn  btn-info" value="OK" style="float: left; margin-right: 5px" >
 
 
                             {!! Form::close() !!}
-
-                        </td>
-                        <td>{{$cartItem->options->has('size')?$cartItem->options->size:''}}</td>
-
-                        <td>
 
                             <form action="{{route('cart.destroy', $cartItem->rowId)}}" method="post">
 
@@ -79,6 +102,7 @@
                     <td><b>Items: </b>{{Cart::count()}}</td>
 
                     <td></td>
+                    <td></td>
 
 
                 </tr>
@@ -90,8 +114,11 @@
 
         </div>
 
+<td>
+    <a href="{{url('/checkout')}}"> <hr><button class="btn btn-success" style=" margin-left: 1140px;margin-top: -220px ">Checkout</button></a>
 
-        <hr><button class="btn btn-success" style="padding: 10px; margin-left: 1100px">Checkout</button>
+</td>
+
 
 
 
