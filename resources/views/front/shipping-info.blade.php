@@ -15,7 +15,7 @@
                 <h3>Shipping Info</h3>
 
 
-                {!! Form::open(['route'=>'checkout.shipping','method'=>'post']) !!}
+                {!! Form::open(['route'=>'address.store','method'=>'post']) !!}
 
 
                 <div class="form-group">
@@ -43,13 +43,6 @@
                 </div>
 
 
-                <div class="form-group">
-
-                    {!! Form::label('state','State:') !!}
-                    {!! Form::text('state', null, ['class'=>'form-control']) !!}
-
-                </div>
-
 
                 <div class="form-group">
 
@@ -73,9 +66,6 @@
                     {!! Form::text('phone', null, ['class'=>'form-control']) !!}
 
                 </div>
-
-
-
 
 
 

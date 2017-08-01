@@ -11,8 +11,28 @@
 
         @forelse($products as $product)
         <thead>
+
           <tr>
-            <th>Product Name:{{$product->name}}</th>
+            <h4>Product Name:{{$product->name}}</h4>
+            <h4>Category::{{count($product->category)?$product->category->name:"N/A"}}</h4>
+
+
+              <form action="{{route('product.destroy',$product->id)}}" method="post">
+
+
+                  {{csrf_field()}}
+                  {{method_field('DELETE')}}
+
+                  <input type="submit" class="btn btn-danger" value="Delete">
+
+
+
+              </form>
+
+
+
+
+
 
               @empty
 
@@ -25,23 +45,6 @@
 
         @endforelse
 
-        {{--<tbody>--}}
-          {{--<tr>--}}
-            {{--<td>John</td>--}}
-            {{--<td>Doe</td>--}}
-            {{--<td>john@example.com</td>--}}
-          {{--</tr>--}}
-          {{--<tr>--}}
-            {{--<td>Mary</td>--}}
-            {{--<td>Moe</td>--}}
-            {{--<td>mary@example.com</td>--}}
-          {{--</tr>--}}
-          {{--<tr>--}}
-            {{--<td>July</td>--}}
-            {{--<td>Dooley</td>--}}
-            {{--<td>july@example.com</td>--}}
-          {{--</tr>--}}
-        {{--</tbody>--}}
     </table>
 
 

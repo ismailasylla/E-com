@@ -5,7 +5,6 @@
 
     <!-- ...................................................featured Products................................................... -->
 
-
     <div class="row">
         <div class="col-md-12">
             <h3 class="a-size-large a-text-normal" style="margin-left: 630px;" id="futured">Nos&nbsp;Produits</h3>
@@ -39,6 +38,7 @@
                                                             <s>300.000 Fcfa</s>
                                                         </p>
                                                         <p class="price"> {{ $laptop->price }}</p>
+                                                        <a href="{{route('cart.addItem',$laptop->id)}}" type="button" class="btn btn-success" data-toggle="modal">Ajouter au panier</a>
                                                         <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal-1">Detail Du Produit</button>
                                                     </div>
                                                 </div>
@@ -60,6 +60,7 @@
 
     <!-- ...................................................featured Products................................................... -->
     </div>
+
 
 
     <!-- Modal -->
