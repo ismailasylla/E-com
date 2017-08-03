@@ -4,7 +4,7 @@
 
     <div class="row">
 
-        <div class="container" style="margin-top: 17px; padding: 5px" >
+        <div class="container" style="margin-top: 20px; padding: 2px ; width: 950px"  >
 
 
             <h3>Cart Items</h3>
@@ -62,7 +62,8 @@
 
                         <td>
 
-                            <input type="submit" class="btn  btn-info" value="OK" style="float: left; margin-right: 5px" >
+
+                            <input type="submit" class="btn  btn-info" value="OK"  >
 
 
                             {!! Form::close() !!}
@@ -72,7 +73,7 @@
                                 {{csrf_field()}}
 
                                 {{method_field('DELETE')}}
-                                <input class="btn btn-danger" type="submit" value="Delete">
+                                <td><input class="btn btn-danger" type="submit" value="Delete" style="margin-left: -20px"></td>
 
                             </form>
 
@@ -114,10 +115,9 @@
 
         </div>
 
-<td>
-    <a href="{{url('/checkout')}}"> <hr><button class="btn btn-success" style=" margin-left: 1140px;margin-top: -220px ">Checkout</button></a>
 
-</td>
+        <td> <a href="{{url('/checkout')}}"  class="btn btn-success" style=" margin-left: 1110px;margin-top: -150px ">Checkout</a></td>
+
 
 
 
