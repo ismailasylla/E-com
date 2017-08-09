@@ -30,14 +30,14 @@
                     <div class="navbar-header">
                         <a class="navbar-brand" href="{{url('/')}}">
                     <img alt="Brand" src="images/r3.png" style="width: 80px; margin-top: -10px;" class="logo">
-                </a><span  class="navbar-brand" style="color: white" >Future-Technology</span>
+                </a> <a href="{{url('/')}}"><span  class="navbar-brand" style="color: white" >Future-Technology</span></a>
                     </div>
                     <ul class="nav navbar-nav navbar-right">
                         <!--<li><a href="#" target="_blank" style="color: white">S'inscrire</a></li>-->
                         {{--<li id="log"><a href="connect.php" style="color: white">Connexion et Inscription</a></li>--}}
 
                         <li>
-                            <a href="#" style="color: white">Contact</a>
+                            <a href="#" style="color: white"> <i class="fa fa-phone" aria-hidden="true"></i> Contact</a>
                         </li>
                         <!-- <li>
                     <a href="#" class="btn btn-info btn-lg">
@@ -55,13 +55,14 @@
                             <ul class="dropdown-menu">
                                 @if(Auth::check())
 
-                                    <li><a href="#">{{Auth::user()->name}}</a></li>
+                                    <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> {{Auth::user()->name}}</a></li>
                                     <li role="separator" class="divider"></li>
-                                    <li><a href="{{ route('logout') }}">Logout</a></li>
+                                    <li><a href="{{ route('logout') }}"><i class="fa fa-btn fa-sign-out" aria-hidden="true"></i>Logout</a></li>
                                 @else
 
-                                    <li><a href="{{ route('register') }}">Signup</a></li>
-                                    <li><a href="{{ route('login') }}">Signin</a></li>
+                                    <li><a href="{{ route('login') }}"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="{{ route('register') }}"><i class="fa fa-user-plus" aria-hidden="true" ></i> Register</a></li>
                                 @endif
 
 
@@ -89,7 +90,7 @@
                     <form class="navbar-form " role="search">
                         <div class="input-group" style="margin-left: 370px; margin-top: -50px;">
                             <span class="input-group-btn">
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Acheter <span class="caret"></span>
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> All <i class="fa fa-arrow-down" aria-hidden="true"></i><span ></span>
                             </button>
                             <ul class="dropdown-menu">
                                 <li><a href="{{url('/laptops')}}">Ordinateurs portables & Tablettes</a></li>
