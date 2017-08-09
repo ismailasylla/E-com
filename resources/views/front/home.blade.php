@@ -54,28 +54,35 @@
         </div>
     </div>
 </div>
-<div class="row">
+
+<div class="container">
 
     @forelse($laptops->chunk(4) as $chunk)
-        @foreach($chunk as $laptop)
-    <div class="col-md-3">
-        <div class="imageGridRowWrapper" style="margin-left: 30px;">
-            <div class="imageGridRowWrapper-inner">
-                <div class="vertical-warpper">
-                    <div class="vertical-warpper-inner">
-                        <div class="quad-packs">
-                            <h4 style="margin-left: 38px;"> {{$laptop->name}} </h4>
-                            <div class="a-row image-row">
-                                <div class="a-column a-span6 leftCol">
-                                    <div class="imageWithText">
-                                        <a class="a-link-normal" href="{{route('laptops')}}"><img alt="Accer-Aspire" src="{{url('image', $laptop->image)}}" height="292px" width="292px" id="featured" class="img-responssive"></a>
-                                        <div class="departmentTitle" style="padding: 10px;">
-                                            <p class="list-price text-danger"> Prix:
-                                                <s>300.000 Fcfa</s>
-                                            </p>
-                                            <p class="price"> {{ $laptop->price }}</p>
-                                            <a href="{{route('cart.addItem',$laptop->id)}}" type="button" class="btn btn-success" data-toggle="modal">Ajouter au panier</a>
-                                            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal-1">Detail Du Produit</button>
+        <div class="row">
+            @foreach($chunk as $laptop)
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <div class="imageGridRowWrapper" >
+                            <div class="imageGridRowWrapper-inner">
+                                <div class="vertical-warpper">
+                                    <div class="vertical-warpper-inner">
+                                        <div class="quad-packs">
+                                            <h4 style="margin-left: 38px;"> {{$laptop->name}} </h4>
+                                            <div class="a-row image-row">
+                                                <div class="a-column a-span6 leftCol">
+                                                    <div class="imageWithText">
+                                                        <a class="a-link-normal" href="{{route('laptops')}}"><img alt="Accer-Aspire" src="{{url('image', $laptop->image)}}" height="292px" width="292px" id="featured" class="img-responssive"></a>
+                                                        <div class="departmentTitle" style="padding: 10px;">
+                                                            <p class="list-price text-danger"> Prix:
+                                                                <s>300.000 Fcfa</s>
+                                                            </p>
+                                                            <p class="price"> {{ $laptop->price }}</p>
+                                                            <a href="{{route('cart.addItem',$laptop->id)}}" type="button" class="btn btn-success" data-toggle="modal">Ajouter au panier</a>
+                                                            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal-1">Detail Du Produit</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -83,20 +90,14 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            @endforeach
+            @empty
+
+                <h3> No laptops </h3>
         </div>
-    </div>
+    @endforelse
 
-        @endforeach
-        @empty
-
-        <h3> No laptops </h3>
-
-        @endforelse
-
-    <!-- ...................................................featured Products................................................... -->
 </div>
-
 
 
 <!-- Modal -->

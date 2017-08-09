@@ -34,7 +34,8 @@
                     </div>
                     <ul class="nav navbar-nav navbar-right">
                         <!--<li><a href="#" target="_blank" style="color: white">S'inscrire</a></li>-->
-                        <li id="log"><a href="connect.php" style="color: white">Connexion et Inscription</a></li>
+                        {{--<li id="log"><a href="connect.php" style="color: white">Connexion et Inscription</a></li>--}}
+
                         <li>
                             <a href="#" style="color: white">Contact</a>
                         </li>
@@ -49,7 +50,23 @@
                                 Panier <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true" class="alert-badge"><b>{{Cart::count()}}</b></span>&zwnj;</button></a>
 
 
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: white"><i class="fa fa-user" aria-hidden="true"></i> User Management <span class="caret" ></span></a>
+                            <ul class="dropdown-menu">
+                                @if(Auth::check())
 
+                                    <li><a href="#">{{Auth::user()->name}}</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="{{ route('logout') }}">Logout</a></li>
+                                @else
+
+                                    <li><a href="{{ route('register') }}">Signup</a></li>
+                                    <li><a href="{{ route('login') }}">Signin</a></li>
+                                @endif
+
+
+                            </ul>
+                        </li>
                         {{--</li>--}}
                     </ul>
                     <div class="nav navbar-nav">
@@ -104,7 +121,7 @@
             @yield('content')
 
 
-            <div class="container-fluid"><footer class="text-center" id="footer" style=" margin-top: 520px ">&copy; Copyright 2017-2018 Future-Technology</footer></div>
+            {{--<div class="container-fluid"><footer class="text-center" id="footer" style=" margin-top: 520px ">&copy; Copyright 2017-2018 Future-Technology</footer></div>--}}
 
             <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
             <script src="js/jquery.min.js"></script>
