@@ -106,38 +106,38 @@
         <div class="modal-dialog">
             <!-- Modal content-->
 
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Détails sur le produit</h4>
-                </div>
-                <div class="modal-body">
-                    <a href="">
-                        <p>{{$laptop->description}}</p>
-                    </a>
-                    <h4> {{$laptop->name }} </h4>
-                    <div class="a-row image-row">
-                        <div class="a-column a-span6 leftCol">
-                            <div class="imageWithText">
-                                <a class="a-link-normal" href="{{route('laptops')}}"><img alt="Accer-Aspire" src="{{url('image', $laptop->image)}}" height="292px" width="292px" id="featured" class="img-responsive"></a>
-                                <div class="departmentTitle" style="padding: 10px;">
-                                    <p class="list-price text-danger"> Prix:
-                                        <s>300.000 Fcfa</s>
-                                    </p>
-                                    <p class="price">{{$laptop->price}}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal">Ajouter au panier</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Fermé</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+            {{--<div class="modal-content">--}}
+                {{--<div class="modal-header">--}}
+                    {{--<button type="button" class="close" data-dismiss="modal">&times;</button>--}}
+                    {{--<h4 class="modal-title">Détails sur le produit</h4>--}}
+                {{--</div>--}}
+                {{--<div class="modal-body">--}}
+                    {{--<a href="">--}}
+                        {{--<p>{{$laptop->description}}</p>--}}
+                    {{--</a>--}}
+                    {{--<h4> {{$laptop->name }} </h4>--}}
+                    {{--<div class="a-row image-row">--}}
+                        {{--<div class="a-column a-span6 leftCol">--}}
+                            {{--<div class="imageWithText">--}}
+                                {{--<a class="a-link-normal" href="{{route('laptops')}}"><img alt="Accer-Aspire" src="{{url('image', $laptop->image)}}" height="292px" width="292px" id="featured" class="img-responsive"></a>--}}
+                                {{--<div class="departmentTitle" style="padding: 10px;">--}}
+                                    {{--<p class="list-price text-danger"> Prix:--}}
+                                        {{--<s>300.000 Fcfa</s>--}}
+                                    {{--</p>--}}
+                                    {{--<p class="price">{{$laptop->price}}</p>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+                {{--<div class="modal-footer">--}}
+                    {{--<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal">Ajouter au panier</button>--}}
+                    {{--<button type="button" class="btn btn-default" data-dismiss="modal">Fermé</button>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</div>--}}
+{{--</div>--}}
 
 
 
