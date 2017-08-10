@@ -82,7 +82,6 @@
 
 
 
-                    </tr>
 
                 @endforeach
 
@@ -95,6 +94,7 @@
 
                             Tax: ${{Cart::tax()}}<br>
                             Sub Total : ${{Cart::total()}}<br>
+                </tr>
                             Grand Total : </b> ${{Cart::total()}}<br>
 
 

@@ -47,7 +47,7 @@
                         {{--<li class="input-group-btn" style="margin-top: 8px; margin-right: 5px;">--}}
 
                         <a href="{{route('cart.index')}}"> <button class="btn btn-warning" type="button" style="border-top-left-radius: 7px !important;margin-top: 8px; margin-right: 5px;">
-                                Panier <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true" class="alert-badge"><b>{{Cart::count()}}</b></span>&zwnj;</button></a>
+                                Cart <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true" class="alert-badge"><b>{{Cart::count()}}</b></span>&zwnj;</button></a>
 
 
                         <li class="dropdown">
@@ -55,7 +55,9 @@
                             <ul class="dropdown-menu">
                                 @if(Auth::check())
 
-                                    <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> {{Auth::user()->name}}</a></li>
+                                    <li><a href="{{route('user.profile')}}"> <i class="fa fa-user" aria-hidden="true"></i> {{Auth::user()->name}}  <img src="/uploads/avatars/{{Auth::user()->avatar}}" style="width: 32px; hight:32px; position: ; top:4px; border-radius:50%; margin-left: 25px; "></a></li>
+
+
                                     <li role="separator" class="divider"></li>
                                     <li><a href="{{ route('logout') }}"><i class="fa fa-btn fa-sign-out" aria-hidden="true"></i>Logout</a></li>
                                 @else
@@ -72,7 +74,7 @@
                     </ul>
                     <div class="nav navbar-nav">
                         <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download" style="color: white">Nos Services<span class="caret"></span></a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download" style="color: white"><i class="fa fa-wrench" aria-hidden="true"></i> Services<span class="caret"></span></a>
                             <ul class="dropdown-menu" aria-labelledby="download">
                                 <li><a href="http://jsfiddle.net/bootswatch/9y480qo5/">Reparation & Maintenance</a></li>
                                 <li class="divider"></li>
@@ -111,7 +113,7 @@
                             <!-- /btn-group -->
                             <input type="text" class="form-control" aria-label="..." style="width: 550px;">
                             <span class="input-group-btn">
-                <button class="btn btn-warning" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>&zwnj;                   </button>
+                <button class="btn btn-warning" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>&zwnj;</button>
                             </span>
                         </div>
                         <!-- /input-group -->

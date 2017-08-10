@@ -15,6 +15,20 @@ Route::get('/', 'FrontController@index');
 
 
 
+Route::get('/profile',[
+
+    'uses'=> 'UserController@profile',
+    'as'=> 'user.profile'
+]);
+
+Route::post('/profile',[
+
+    'uses'=> 'UserController@update_avatar',
+    'as'=> 'user.profile'
+]);
+
+
+
 Route::get('/laptops','FrontController@laptops')->name('laptops');
 
 
