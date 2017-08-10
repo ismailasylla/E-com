@@ -27,6 +27,17 @@ Route::post('/profile',[
     'as'=> 'user.profile'
 ]);
 
+Route::get('/contact',[
+
+    'uses'=> 'ContactController@contact',
+    'as'=> 'contact.contact'
+]);
+
+
+
+
+
+
 
 
 Route::get('/laptops','FrontController@laptops')->name('laptops');

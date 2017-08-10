@@ -37,7 +37,7 @@
                         {{--<li id="log"><a href="connect.php" style="color: white">Connexion et Inscription</a></li>--}}
 
                         <li>
-                            <a href="#" style="color: white"> <i class="fa fa-phone" aria-hidden="true"></i> Contact</a>
+                            <a href="{{route('contact.contact')}}" style="color: white"> <i class="fa fa-phone" aria-hidden="true"></i> Contact</a>
                         </li>
                         <!-- <li>
                     <a href="#" class="btn btn-info btn-lg">
