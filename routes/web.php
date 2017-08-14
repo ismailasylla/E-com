@@ -40,7 +40,7 @@ Route::get('/contact',[
 
 
 
-Route::get('/laptops','FrontController@laptops')->name('laptops');
+Route::get('/products','FrontController@products')->name('products');
 
 
 Auth::routes();
