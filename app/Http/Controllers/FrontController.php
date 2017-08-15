@@ -11,18 +11,18 @@ class FrontController extends Controller
 
         public function index(){
 
-            $laptops=Product::all();
+            $products=Product::all();
 
-            return view('front.home',compact('laptops'));
+            return view('front.home',compact('products'));
 
         }
 
 
 
-        public function laptops(){
+        public function products(){
 
-            $laptops=Product::all();
-            return view('front.laptops',compact('laptops'));
+            $products=Product::all();
+            return view('front.products',compact('products'));
 
 
 

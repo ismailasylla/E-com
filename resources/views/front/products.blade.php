@@ -1,9 +1,6 @@
 @extends('layout.main')
 
-<?php
-        $my_laptop = $products[0];
 
-?>
 @section('content')
 
     <!-- ...................................................featured Products................................................... -->
@@ -38,20 +35,14 @@
                                                 <div class="a-row image-row">
                                                     <div class="a-column a-span6 leftCol">
                                                         <div class="imageWithText">
-                                                            <a class="a-link-normal" href="{{route('laptops')}}"><img alt="Accer-Aspire" src="{{url('image', $product->image)}}" height="292px" width="292px" id="featured" class="img-responssive"></a>
+                                                            <a class="a-link-normal" href="{{route('products')}}"><img alt="Accer-Aspire" src="{{url('image', $product->image)}}" height="292px" width="292px" id="featured" class="img-responssive"></a>
                                                             <div class="departmentTitle" style="padding: 10px;">
-                                                                {{--<p class="list-price text-danger"> Prix:--}}
-                                                                {{--<s>300.000 Fcfa</s>--}}
-                                                                {{--</p>--}}
-                                                                <p class="price"> ${{ $product->price }}</p>
+                                                                <p class="list-price text-danger"> Prix:
+                                                                    <s>300.000 Fcfa</s>
+                                                                </p>
+                                                                <p class="price"> {{ $product->price }}</p>
                                                                 <a href="{{route('cart.addItem',$product->id)}}" type="button" class="btn btn-success" data-toggle="modal">Ajouter au panier</a>
-
-                                                                <!--<button data-lap_obj="1" type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal-1">Detail Du Produit</button>
-                                                                -->
-
-                                                                <a data-l_id="<?= $product->id;?>" data-image="<?= $product->image;?>" data-desc="<?= $product->description;?>" data-m_name="<?= $product->name;?>"data-m_price=" $<?= $product->price;?>" title="Add this item" class="open-LapDialog" >
-                                                                <button  class="btn btn-warning"><i style="color: white">Detail</i>
-                                                                </button></a>
+                                                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal-1">Detail Du Produit</button>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -72,52 +63,49 @@
 
     </div>
 
-
     <!-- ...................................................featured Products................................................... -->
 
-    <!-- Modal -->
-    <div>
-        <div class="modal fade" id="LapDialog" role="dialog">
-            <div class="modal-dialog">
-                <!-- Modal content-->
 
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Détails sur le produit</h4>
-                    </div>
-                    <div class="modal-body">
-                        <a href="">
-                            <p id="desc"></p>
-                        </a>
-                        <h4 id="m_name"> </h4>
-                        <div class="a-row image-row">
-                            <div class="a-column a-span6 leftCol">
-                                <div class="imageWithText">
-                                    <a class="a-link-normal" href="{{route('laptops')}}">
-                                        <img alt="Accer-Aspire" src="" height="292px" width="292px" id="featuredIMG" class="img-responsive"></a>
-                                    <div class="departmentTitle" style="padding: 10px;">
+
+
+    {{--<!-- Modal -->--}}
+    {{--<div>--}}
+        {{--<div class="modal fade" id="myModal-1" role="dialog">--}}
+            {{--<div class="modal-dialog">--}}
+                {{--<!-- Modal content-->--}}
+
+                {{--<div class="modal-content">--}}
+                    {{--<div class="modal-header">--}}
+                        {{--<button type="button" class="close" data-dismiss="modal">&times;</button>--}}
+                        {{--<h4 class="modal-title">Détails sur le produit</h4>--}}
+                    {{--</div>--}}
+                    {{--<div class="modal-body">--}}
+                        {{--<a href="">--}}
+                            {{--<p>{{$product->description}}</p>--}}
+                        {{--</a>--}}
+                        {{--<h4> {{$product->name }} </h4>--}}
+                        {{--<div class="a-row image-row">--}}
+                            {{--<div class="a-column a-span6 leftCol">--}}
+                                {{--<div class="imageWithText">--}}
+                                    {{--<a class="a-link-normal" href="{{route('products')}}"><img alt="Accer-Aspire" src="{{url('image', $product->image)}}" height="292px" width="292px" id="featured" class="img-responsive"></a>--}}
+                                    {{--<div class="departmentTitle" style="padding: 10px;">--}}
                                         {{--<p class="list-price text-danger"> Prix:--}}
                                             {{--<s>300.000 Fcfa</s>--}}
                                         {{--</p>--}}
-                                        <p class="price" id="m_price"></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <a id="m_add2cat" href="" type="button" class="btn btn-success">Ajouter au panier</a>
-
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Fermé</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
+                                        {{--<p class="price">{{$product->price}}</p>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--<div class="modal-footer">--}}
+                        {{--<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal">Ajouter au panier</button>--}}
+                        {{--<button type="button" class="btn btn-default" data-dismiss="modal">Fermé</button>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</div>--}}
 
 
 
